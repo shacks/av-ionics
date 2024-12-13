@@ -10,13 +10,11 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   
   <style>
-    /* Theme Colors */
     :root {
       --primary-color: #0d3b66;
       --secondary-color: #faf0ca;
     }
 
-    /* Typography */
     body {
       font-family: 'Helvetica Neue', sans-serif;
     }
@@ -41,58 +39,43 @@
       margin: 0 auto 30px;
     }
 
-    /* Layout */
+    .hero-logo {
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto 2rem;
+      display: block;
+      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+      .hero-logo {
+        max-width: 200px;
+      }
+      section {
+        padding: 40px 0;
+      }
+    }
+
     section {
       padding: 60px 0;
     }
 
-    /* Footer */
     footer {
       background: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 20px 0;
     }
-
-    /* Make hero text more readable on mobile */
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;  /* Smaller font on mobile */
-      }
-      
-      .hero p {
-        font-size: 1rem;
-        padding: 0 15px;
-      }
-      
-      section {
-        padding: 40px 0;  /* Less vertical padding on mobile */
-      }
-      
-      .card {
-        margin-bottom: 20px;  /* Add space between stacked cards */
-      }
-    }
-
-    /* Ensure cards don't get too wide on mobile */
-    .card {
-      max-width: 100%;
-      margin: 0 auto;
-    }
-
-    /* Make sure long links don't overflow on mobile */
-    a {
-      word-wrap: break-word;
-    }
   </style>
 </head>
-
 <body>
   <!-- Navigation -->
   <header class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -107,6 +90,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -115,9 +99,10 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
+      <img src="./AV Logo.jpg" alt="AV-ionics Logo" class="hero-logo">
       <h1>Avionics Engineering & STC Solutions</h1>
       <p>Specialized in achieving STCs, consulting on avionics integration, and providing pilot assistance. 
-         Ready to support your aviation projects with clarity and efficiency.</p>
+      Ready to support your aviation projects with clarity and efficiency.</p>
     </div>
   </section>
 
@@ -126,38 +111,33 @@
     <div class="container">
       <h2 class="text-center mb-5">Services</h2>
       <div class="row g-4">
-        <!-- Service Card 1 -->
         <div class="col-md-4">
           <div class="card border-0 shadow h-100">
             <div class="card-body text-center">
               <i class="bi bi-gear-wide-connected display-4 text-primary mb-3"></i>
               <h5 class="card-title mb-3">STC Development</h5>
               <p class="card-text">Guidance in achieving supplemental type certifications for avionics upgrades 
-                                  and modifications to ensure regulatory compliance.</p>
+              and modifications to ensure regulatory compliance.</p>
             </div>
           </div>
         </div>
-        
-        <!-- Service Card 2 -->
         <div class="col-md-4">
           <div class="card border-0 shadow h-100">
             <div class="card-body text-center">
               <i class="bi bi-pc-display-horizontal display-4 text-primary mb-3"></i>
               <h5 class="card-title mb-3">Avionics Engineering</h5>
               <p class="card-text">Comprehensive avionics consultation and engineering services, 
-                                  encompassing system design and detailed engineering reports.</p>
+              encompassing system design and detailed engineering reports.</p>
             </div>
           </div>
         </div>
-        
-        <!-- Service Card 3 -->
         <div class="col-md-4">
           <div class="card border-0 shadow h-100">
             <div class="card-body text-center">
               <i class="bi bi-people-fill display-4 text-primary mb-3"></i>
               <h5 class="card-title mb-3">Industry Network</h5>
               <p class="card-text">Leverage a trusted network of industry partners offering complementary services, 
-                                  including flight test activities, to streamline project execution.</p>
+              including flight test activities, to streamline project execution.</p>
             </div>
           </div>
         </div>
@@ -172,7 +152,12 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <p class="lead text-center">
-            As an avionics engineering leader, I've spearheaded multiple Supplemental Type Certification (STC) programs across diverse aircraft platforms, consistently delivering solutions that elevate both safety standards and operational performance. My dual expertise as a Program Certification Manager (PCM) and experience with OEM Type Certification processes has proven invaluable in navigating complex regulatory landscapes. I've built a track record of translating technical requirements into pragmatic, cost-effective solutions while maintaining rigorous compliance standards.
+            As an avionics engineering leader, I've spearheaded multiple Supplemental Type Certification (STC) programs 
+            across diverse aircraft platforms, consistently delivering solutions that elevate both safety standards and 
+            operational performance. My dual expertise as a Program Certification Manager (PCM) and experience with OEM 
+            Type Certification processes has proven invaluable in navigating complex regulatory landscapes. I've built a 
+            track record of translating technical requirements into pragmatic, cost-effective solutions while maintaining 
+            rigorous compliance standards.
           </p>
         </div>
       </div>
@@ -192,17 +177,11 @@
             <p class="text-center">Ready to discuss your avionics project? I'm here to help.</p>
             <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
               <i class="bi bi-envelope"></i>
-              <a href="mailto:shaz@av-ionics.ca" class="text-decoration-none">
-                shaz@av-ionics.ca
-              </a>
+              <a href="mailto:shaz@av-ionics.ca" class="text-decoration-none">shaz@av-ionics.ca</a>
             </div>
             <div class="d-flex justify-content-center align-items-center gap-3">
               <i class="bi bi-linkedin"></i>
-              <a href="https://www.linkedin.com/in/shashank-sunil-53a3312a/" 
-                 target="_blank" 
-                 class="text-decoration-none">
-                Connect on LinkedIn
-              </a>
+              <a href="https://www.linkedin.com/in/shashank-sunil-53a3312a/" target="_blank" class="text-decoration-none">Connect on LinkedIn</a>
             </div>
           </div>
         </div>

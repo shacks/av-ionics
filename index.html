@@ -99,9 +99,9 @@
       margin-bottom: 15px;
     }
 
-   .section-title.lead {
+   .section-title .lead {
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 60px;
       color: #6c757d;
     }
 
@@ -121,7 +121,7 @@
       box-shadow: 0 15px 40px rgba(0,0,0,0.1);
     }
 
-   .service-card.icon {
+   .service-card .icon {
       font-size: 3rem;
       color: var(--accent-color);
       margin-bottom: 20px;
@@ -143,7 +143,7 @@
         margin-bottom: 30px;
     }
 
-   .advantage-item.icon {
+   .advantage-item .icon {
         font-size: 2rem;
         color: var(--primary-color);
         margin-right: 20px;
@@ -153,6 +153,17 @@
    .advantage-item h5 {
         margin-bottom: 5px;
     }
+    
+   .part-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+   .part-icon + h6 {
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
 
     #contact {
       background: linear-gradient(rgba(10, 44, 78, 0.9), rgba(10, 44, 78, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
@@ -160,7 +171,7 @@
       color: var(--light-text-color);
     }
 
-    #contact h2, #contact.lead {
+    #contact h2, #contact .lead {
         color: var(--light-text-color);
     }
     
@@ -175,7 +186,7 @@
         color: var(--accent-color);
     }
 
-   .contact-info.icon {
+   .contact-info .icon {
         font-size: 1.5rem;
         color: var(--accent-color);
     }
@@ -284,6 +295,29 @@
             </div>
         </div>
       </div>
+
+      <div class="text-center mt-5 pt-5">
+          <h3 class="mb-4">Broad Certification Basis Expertise</h3>
+          <p class="lead" style="max-width: 800px; margin: 0 auto 40px;">We possess comprehensive experience certifying modifications across all major airworthiness standards for a diverse range of aviation assets.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+              <div class="part-icon"><i class="bi bi-airplane-engines"></i></div>
+              <h6>Part 23 & 25</h6>
+              <p class="text-muted small">Commuter & Transport Airplanes</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+              <div class="part-icon"><i class="bi bi-fan"></i></div>
+              <h6>Part 27 & 29</h6>
+              <p class="text-muted small">Normal & Transport Rotorcraft</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-center">
+              <div class="part-icon"><i class="bi bi-balloon"></i></div>
+              <h6>Part 31</h6>
+              <p class="text-muted small">Manned Free Balloons</p>
+          </div>
+      </div>
+
     </div>
   </section>
 

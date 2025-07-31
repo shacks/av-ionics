@@ -3,197 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AV-ionics.ca - Avionics Engineering & STC Support</title>
+  <title>AV-ionics.ca - Aerospace Engineering & Certification</title>
   
-  <!-- External CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --primary-color: #0d3b66;
-      --secondary-color: #faf0ca;
+      --primary-color: #0a2c4e; /* Deep, professional blue */
+      --secondary-color: #f8f9fa; /* Light grey background */
+      --accent-color: #d4a017; /* Elegant gold accent */
+      --text-color: #333;
+      --light-text-color: #f8f9fa;
     }
 
     body {
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-color);
+      line-height: 1.7;
     }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      color: #fff;
-      padding: 100px 0;
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+   .navbar {
+      transition: background-color 0.3s ease;
+    }
+
+   .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+   .nav-link {
+      font-weight: 400;
+      transition: color 0.3s ease;
+    }
+
+   .nav-link:hover {
+      color: var(--accent-color);
+    }
+
+   .hero {
+      background: var(--primary-color);
+      color: var(--light-text-color);
+      padding: 120px 0;
       text-align: center;
     }
 
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
+   .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
       margin-bottom: 20px;
+      color: var(--light-text-color);
     }
 
-    .hero p {
+   .hero p {
       font-size: 1.2rem;
-      max-width: 600px;
+      font-weight: 300;
+      max-width: 700px;
       margin: 0 auto 30px;
     }
 
-    .hero-logo {
-      max-width: 300px;
-      height: auto;
-      margin: 0 auto 2rem;
-      display: block;
-      filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
-      border-radius: 10px;
+   .btn-primary-custom {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #fff;
+        padding: 12px 30px;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: all 0.3s ease;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-        padding: 0 15px;
-      }
-      .hero-logo {
-        max-width: 200px;
-      }
-      section {
-        padding: 40px 0;
-      }
+   .btn-primary-custom:hover {
+        background-color: #b8860b; /* Darker gold */
+        border-color: #b8860b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     section {
-      padding: 60px 0;
+      padding: 80px 0;
+    }
+
+   .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+   .section-title h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+   .section-title.lead {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #6c757d;
+    }
+
+   .service-card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      transition: all 0.3s ease-in-out;
+      height: 100%;
+    }
+
+   .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+
+   .service-card.icon {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+   .service-card h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    #advantage {
+      background-color: var(--secondary-color);
+    }
+
+   .advantage-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+
+   .advantage-item.icon {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-right: 20px;
+        margin-top: 5px;
+    }
+
+   .advantage-item h5 {
+        margin-bottom: 5px;
+    }
+
+    #contact {
+      background: linear-gradient(rgba(10, 44, 78, 0.9), rgba(10, 44, 78, 0.9)), url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+      background-size: cover;
+      color: var(--light-text-color);
+    }
+
+    #contact h2, #contact.lead {
+        color: var(--light-text-color);
+    }
+    
+   .contact-info a {
+        color: var(--light-text-color);
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+
+   .contact-info a:hover {
+        color: var(--accent-color);
+    }
+
+   .contact-info.icon {
+        font-size: 1.5rem;
+        color: var(--accent-color);
     }
 
     footer {
       background: var(--primary-color);
-      color: #fff;
+      color: var(--light-text-color);
       text-align: center;
-      padding: 20px 0;
+      padding: 30px 0;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">AV-ionics.ca</a>
-      <button class="navbar-toggler" type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#navMenu">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#advantage">Our Advantage</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <img src="./AV Logo.jpg" alt="AV-ionics Logo" class="hero-logo">
-      <h1>Avionics Engineering & STC Solutions</h1>
-      <p>Specialized in achieving STCs, consulting on avionics integration, and providing pilot assistance. 
-      Ready to support your aviation projects with clarity and efficiency.</p>
+      <h1>Engineering Excellence in Aviation</h1>
+      <p>AV-ionics.ca delivers premier design, engineering, and certification solutions for the global aerospace industry. We navigate the complexities of airworthiness, turning your vision into a certified reality.</p>
+      <a href="#contact" class="btn btn-primary-custom">Get in Touch</a>
     </div>
   </section>
 
-  <!-- Services Section -->
   <section id="services">
     <div class="container">
-      <h2 class="text-center mb-5">Services</h2>
+      <div class="section-title">
+        <h2>Comprehensive Aerospace Solutions</h2>
+        <p class="lead">We offer a full suite of services to support your aircraft modification and certification needs from start to finish.</p>
+      </div>
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-gear-wide-connected display-4 text-primary mb-3"></i>
-              <h5 class="card-title mb-3">STC Development</h5>
-              <p class="card-text">Guidance in achieving supplemental type certifications for avionics upgrades 
-              and modifications to ensure regulatory compliance.</p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="icon"><i class="bi bi-patch-check"></i></div>
+            <h5>Design & Certification</h5>
+            <p>End-to-end support for STCs, RDAs, and PDAs. We manage the entire lifecycle, ensuring full regulatory compliance with TCCA, FAA, and EASA.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-pc-display-horizontal display-4 text-primary mb-3"></i>
-              <h5 class="card-title mb-3">Avionics Engineering</h5>
-              <p class="card-text">Comprehensive avionics consultation and engineering services, 
-              encompassing system design and detailed engineering reports.</p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="icon"><i class="bi bi-motherboard"></i></div>
+            <h5>Systems & Avionics</h5>
+            <p>Specializing in complex electrical and avionics system design, including SSA, EWIS, and ELA reports to meet the highest safety standards.</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card border-0 shadow h-100">
-            <div class="card-body text-center">
-              <i class="bi bi-people-fill display-4 text-primary mb-3"></i>
-              <h5 class="card-title mb-3">Industry Network</h5>
-              <p class="card-text">Leverage a trusted network of industry partners offering complementary services, 
-              including flight test activities, to streamline project execution.</p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="icon"><i class="bi bi-bounding-box-circles"></i></div>
+            <h5>Structural Integration</h5>
+            <p>Expert project management for modifications involving both systems and structures, delivering a single, cohesive certification package.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="icon"><i class="bi bi-airplane"></i></div>
+            <h5>Flight Test Support</h5>
+            <p>Hands-on support for certification test programs. We develop robust Ground and Flight Test Plans for fixed-wing and rotary-wing aircraft.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" style="background-color: var(--secondary-color);">
+  <section id="advantage">
     <div class="container">
-      <h2 class="text-center mb-5">Experience</h2>
+      <div class="section-title">
+        <h2>The AV-ionics Advantage</h2>
+        <p class="lead">Our unique combination of experience, insight, and expertise sets us apart and ensures your project's success.</p>
+      </div>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <p class="lead text-center">
-            As an avionics engineering leader, I've spearheaded multiple Supplemental Type Certification (STC) programs 
-            across diverse aircraft platforms, consistently delivering solutions that elevate both safety standards and 
-            operational performance. My dual expertise as a Program Certification Manager (PCM) and experience with OEM 
-            Type Certification processes has proven invaluable in navigating complex regulatory landscapes. I've built a 
-            track record of translating technical requirements into pragmatic, cost-effective solutions while maintaining 
-            rigorous compliance standards.
-          </p>
+            <div class="advantage-item">
+                <div class="icon"><i class="bi bi-shield-check"></i></div>
+                <div>
+                    <h5>Unmatched Regulatory Insight</h5>
+                    <p>Our team includes former Transport Canada (TCCA) Project Certification Managers. This insider perspective provides an unparalleled advantage in navigating the regulatory landscape, mitigating risks, and preventing costly delays.</p>
+                </div>
+            </div>
+            <div class="advantage-item">
+                <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+                <div>
+                    <h5>Versatile Platform Expertise</h5>
+                    <p>We have a proven track record across a wide spectrum of aircraft, from transport category airplanes like the DHC-8 and CRJ series to helicopters such as the Bell 429 and Airbus H160.</p>
+                </div>
+            </div>
+            <div class="advantage-item">
+                <div class="icon"><i class="bi bi-kanban"></i></div>
+                <div>
+                    <h5>Turnkey Project Management</h5>
+                    <p>We lead projects from initial concept through detailed design, testing, and final certification. Our hands-on approach ensures your program is managed efficiently and grounded in technical reality.</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6">
-          <div class="card border-0 shadow p-4">
-            <div class="text-center mb-4">
-              <i class="bi bi-envelope-fill display-4 text-primary"></i>
+      <div class="section-title">
+        <h2>Start Your Next Project With Us</h2>
+        <p class="lead">Ready to discuss your certification and engineering needs? Reach out today for a consultation. We're here to help you achieve your goals with clarity and efficiency.</p>
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-md-8">
+            <div class="contact-info d-flex flex-column flex-md-row justify-content-center align-items-center gap-5">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="icon"><i class="bi bi-envelope-fill"></i></div>
+                    <a href="mailto:shaz@av-ionics.ca">shaz@av-ionics.ca</a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="icon"><i class="bi bi-linkedin"></i></div>
+                    <a href="https://www.linkedin.com/in/shashank-sunil-53a3312a/" target="_blank">Connect on LinkedIn</a>
+                </div>
             </div>
-            <h4 class="text-center mb-4">Let's Connect</h4>
-            <p class="text-center">Ready to discuss your avionics project? I'm here to help.</p>
-            <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
-              <i class="bi bi-envelope"></i>
-              <a href="mailto:shaz@av-ionics.ca" class="text-decoration-none">shaz@av-ionics.ca</a>
-            </div>
-            <div class="d-flex justify-content-center align-items-center gap-3">
-              <i class="bi bi-linkedin"></i>
-              <a href="https://www.linkedin.com/in/shashank-sunil-53a3312a/" target="_blank" class="text-decoration-none">Connect on LinkedIn</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2024 AV-ionics.ca. All rights reserved.</p>
+    <div class="container">
+      <p>&copy; 2024 AV-ionics.ca. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
